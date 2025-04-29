@@ -1,20 +1,23 @@
-pole = [0, 10, 20, 30, 35, 40, 45, 50, 55, 60]
-
-print(sum(pole))
-
-print(sum(pole))
-
-print(max(pole))
-print(min(pole))
-
-hraci = len(pole)
-polovinaHracu = hraci/2
-
-for pole in range >50:
-     print(pole)
-
-if polovinaHracu + pole >50:
-     print("Výborný výkon")
-
-if polovinaHracu + pole<50:
-     print("Můžete to příště zkusit lépe")
+skore = []
+print("Zadej skóre 10 hráčů (0 až 60):")
+for i in range(10):
+   bod = int(input(f"Hráč {i + 1}: "))
+   skore.append(bod)
+# Výpis všech skóre
+print("\nSkóre hráčů:", skore)
+# Výpočty
+prumer = sum(skore) / 10
+nejvyssi = max(skore)
+nejnizsi = min(skore)
+print("Průměrné skóre:", prumer)
+print("Nejvyšší skóre:", nejvyssi)
+print("Nejnižší skóre:", nejnizsi)
+# Hodnocení výkonu
+nad_50 = 0
+for bod in skore:
+   if bod > 50:
+       nad_50 += 1
+if nad_50 > 5:
+   print("Výborný výkon!")
+else:
+   print("Můžete to příště zkusit lépe.")
